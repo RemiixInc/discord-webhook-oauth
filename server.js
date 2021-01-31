@@ -9,9 +9,9 @@ const client_secret = ""
 const redirect_uri = ""
 
 app.get('/', (req, res) => {
-  // If the OAuth2 hasn't been completed, redirect to it
+  // If the authorization hasn't been completed, redirect to it
   if (!req.query.code) return res.redirect(`https://discord.com/api/oauth2/authorize?response_type=code&client_id=${client_id}&scope=webhook.incoming&redirect_uri=${redirect_uri}`);
-  // Contact Discord with oauth code and create the webhook
+  // Contact Discord with OAuth2 code and create the webhook
   const body = {
     'client_id': client_id,
     'client_secret': client_secret,
@@ -39,6 +39,7 @@ app.get('/', (req, res) => {
     });
 });
 
+// Start server
 app.listen(8080, () => { 
   console.log("Server started!") 
 });
