@@ -1,7 +1,7 @@
 {
   "name": "discord-webhook-oauth",
   "version": "1.0.0",
-  "description": "Discord webhook.incoming OAuth example in node.js.",
+  "description": "Discord webhook.incoming OAuth2 example in node.js.",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
