@@ -1,2 +1,2 @@
 # discord-webhook-oauth
-🤝 Discord webhook.incoming oauth example in node.js.
+Discord webhook.incoming OAuth example in node.js.
