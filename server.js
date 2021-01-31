@@ -9,7 +9,7 @@ const client_secret = ""
 const redirect_uri = ""
 
 app.get('/', (req, res) => {
-  // If the oauth hasn't been completed, redirect to it
+  // If the OAuth2 hasn't been completed, redirect to it
   if (!req.query.code) return res.redirect(`https://discord.com/api/oauth2/authorize?response_type=code&client_id=${client_id}&scope=webhook.incoming&redirect_uri=${redirect_uri}`);
   // Contact Discord with oauth code and create the webhook
   const body = {
